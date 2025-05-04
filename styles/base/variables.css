@@ -1,0 +1,189 @@
+:root {
+    /* Font families */
+    --font-family-sans: 'Arial', sans-serif;
+    --font-family-serif: 'Prata', serif;
+
+    /* Color palette */
+    --color-primary-blue: #2563eb;
+    --color-primary-blue-dark: #1e40af;
+    --color-secondary-blue: #4a6cf7;
+    --color-secondary-purple: #a34df4;
+    --color-dark-gray: #222222;
+    --color-light-gray: #f9fafb;
+    --color-medium-gray: #282829;
+    --color-gray-light: #e2e8f0;
+    --color-gray-medium: #9ca3af;
+    --color-success-green: #10b981;
+    --color-error-red: #ef4444;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text-primary: var(--color-dark-gray);
+    --color-text-secondary: var(--color-medium-gray);
+    --color-border-light: var(--color-gray-light);
+
+    /* Font sizes */
+    --font-size-12: 0.75rem;   /* 12px */
+    --font-size-14: 0.875rem;  /* 14px */
+    --font-size-16: 1rem;      /* 16px */
+    --font-size-18: 1.125rem;  /* 18px */
+    --font-size-20: 1.25rem;   /* 20px */
+    --font-size-24: 1.5rem;    /* 24px */
+    --font-size-32: 2rem;      /* 32px */
+    --font-size-36: 2.25rem;   /* 36px */
+    --font-size-40: 2.5rem;    /* 40px */
+    --font-size-50: 3.125rem;  /* 50px */
+    --font-size-54: 3.375rem;  /* 54px */
+    --font-size-80: 5rem;      /* 80px */
+
+    /* Spacing */
+    --space-4: 0.25rem;    /* 4px */
+    --space-8: 0.5rem;     /* 8px */
+    --space-12: 0.75rem;   /* 12px */
+    --space-13: 0.8125rem; /* 13px */
+    --space-15: 0.9375rem; /* 15px */
+    --space-16: 1rem;      /* 16px */
+    --space-20: 1.25rem;   /* 20px */
+    --space-24: 1.5rem;    /* 24px */
+    --space-26: 1.625rem;  /* 26px */
+    --space-30: 1.875rem;  /* 30px */
+    --space-32: 2rem;      /* 32px */
+    --space-40: 2.5rem;    /* 40px */
+    --space-45: 2.8125rem; /* 45px */
+    --space-50: 3.125rem;  /* 50px */
+    --space-64: 4rem;      /* 64px */
+    --space-80: 5rem;      /* 80px */
+    --space-120: 7.5rem;   /* 120px */
+    --space-134: 8.375rem; /* 134px */
+    --space-150: 9.375rem; /* 150px */
+    --space-162: 10.125rem;/* 162px */
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 30px;
+    --radius-full: 9999px;
+
+
+
+    /* Layout */
+    --content-block-width: 67.3%;
+    --third-section-content-width: 45%;
+    --third-section-image-width: 50%;
+    --third-section-bg-image-width: 60%;
+    --grid-column-ratio: 2fr 1fr;
+    --features-gap: 35px;
+    --title-max-width: 600px;
+    --subtitle-max-width: 80%;
+    --form-input-width: 80%;
+    --divider-inset: 15%;
+    --icon-size-ratio: 70%;
+
+    /* Z-index */
+    --z-index-base: 1;
+    --z-index-content-block: 1;
+    --z-index-overlay: 2;
+    --z-index-modal: 10;
+
+    /* Gradients */
+    --divider-gradient: linear-gradient(90deg, transparent, var(--color-gray-light), transparent);
+
+    --transition-fast: all 0.15s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+    --transition-bounce: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 15px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xxl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+    /* Third section specific */
+    --third-section-min-height: 600px;
+    --third-section-overlay-height: 120%;
+}
+
+:root {
+    /* Базовые значения (для 1920px и выше) */
+    --font-size-80: 5rem;      /* 80px */
+    --font-size-50: 3.125rem;  /* 50px */
+    --font-size-40: 2.5rem;    /* 40px */
+    --font-size-36: 2.25rem;   /* 36px */
+    --font-size-24: 1.5rem;    /* 24px */
+
+    --space-162: 10.125rem;    /* 162px */
+    --space-150: 9.375rem;     /* 150px */
+    --space-120: 7.5rem;       /* 120px */
+    --space-80: 5rem;          /* 80px */
+    --space-64: 4rem;          /* 64px */
+    --space-50: 3.125rem;      /* 50px */
+    --space-40: 2.5rem;        /* 40px */
+    --space-30: 1.875rem;      /* 30px */
+    --space-24: 1.5rem;        /* 24px */
+    --space-16: 1rem;          /* 16px */
+    --space-15: 0.9375rem;     /* 15px */
+
+    --content-block-width: 67.3%;
+    --title-max-width: 600px;
+    --features-gap: 35px;
+}
+
+/* 1400px */
+@media (max-width: 1400px) {
+    :root {
+        --font-size-80: 4rem;     /* 64px */
+        --font-size-50: 2.5rem;   /* 40px */
+        --font-size-40: 2rem;     /* 32px */
+
+        --space-162: 8rem;        /* 128px */
+        --space-150: 7.5rem;      /* 120px */
+        --space-120: 6rem;        /* 96px */
+        --space-80: 4rem;         /* 64px */
+        --space-64: 3rem;         /* 48px */
+        --space-50: 2.5rem;       /* 40px */
+    }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+    :root {
+        --font-size-80: 3rem;     /* 48px */
+        --font-size-50: 2rem;     /* 32px */
+        --font-size-40: 1.75rem;  /* 28px */
+        --font-size-36: 1.5rem;   /* 24px */
+        --font-size-24: 1.25rem;  /* 20px */
+
+        --space-162: 4rem;        /* 64px */
+        --space-150: 5rem;        /* 80px */
+        --space-120: 4rem;        /* 64px */
+        --space-80: 3rem;         /* 48px */
+        --space-64: 2rem;         /* 32px */
+        --space-50: 1.5rem;       /* 24px */
+        --space-40: 1.5rem;       /* 24px */
+        --space-30: 1.25rem;      /* 20px */
+
+        --content-block-width: 100%;
+        --title-max-width: 100%;
+        --features-gap: 24px;
+    }
+}
+
+/* 340px */
+@media (max-width: 340px) {
+    :root {
+        --font-size-80: 2.25rem;  /* 36px */
+        --font-size-50: 1.5rem;   /* 24px */
+        --font-size-40: 1.25rem;  /* 20px */
+
+        --space-162: 2rem;        /* 32px */
+        --space-150: 3rem;        /* 48px */
+        --space-120: 2.5rem;      /* 40px */
+        --space-80: 2rem;         /* 32px */
+        --space-64: 1.5rem;       /* 24px */
+        --space-50: 1rem;         /* 16px */
+        --space-15: 0.75rem;      /* 12px */
+
+        --features-gap: 16px;
+    }
+}

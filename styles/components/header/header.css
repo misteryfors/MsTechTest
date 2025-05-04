@@ -1,0 +1,218 @@
+.header-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.header {
+    position: absolute;
+    height: 58px;
+    z-index: 100;
+    background-color: var(--color-dark-gray);
+    transition: var(--transition-bounce);
+    width: 100%;
+}
+
+.header-slot {
+    height: 58px;
+    position: relative;
+}
+
+.header__inner {
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.header--transformed {
+    width: 70%;
+    left: 40px;
+    top: 40px;
+    box-shadow: var(--shadow-lg);
+    padding-top: 15px;
+    height: 73px;
+}
+
+.header--sticky {
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: var(--shadow-lg);
+    padding-top: 10px;
+    height: 68px;
+}
+
+.header__logo {
+    width: 256px;
+    font-size: var(--font-size-36);
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__nav {
+    display: flex;
+    gap: var(--space-24);
+    align-items: center;
+}
+
+.header--transformed + .main-content {
+    padding-top: 120px;
+}
+
+.header--sticky + .main-content {
+    padding-top: 80px;
+}
+
+.header--sticky .header__inner {
+    justify-content: space-between;
+    margin-right: 0;
+}
+
+.header--sticky .header__logo {
+    margin-right: 0;
+}
+
+.header--transformed .header__inner {
+    justify-content: space-between;
+}
+
+.header--transformed .header__logo {
+    margin-right: 0;
+}
+
+/* Мобильное меню */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    z-index: 101;
+}
+
+.mobile-menu-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-icon::before,
+.mobile-menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-icon::before {
+    top: -8px;
+}
+
+.mobile-menu-icon::after {
+    top: 8px;
+}
+
+.mobile-menu-btn.active .mobile-menu-icon {
+    background-color: transparent;
+}
+
+.mobile-menu-btn.active .mobile-menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.mobile-menu-btn.active .mobile-menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Мобильное меню - улучшенная версия */
+@media (max-width: 800px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        order: 1;
+    }
+
+    .header__logo {
+        order: 0;
+        width: auto;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 58px; /* Высота хедера */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-dark-gray);
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 99;
+        max-height: calc(100vh - 58px);
+        overflow-y: auto;
+        /* Убираем точку остановки скролла */
+        overscroll-behavior: contain;
+    }
+
+    .header__nav.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-btn {
+        width: 100%;
+        padding: 15px 25px;
+        text-align: left;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.2s;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: block;
+    }
+
+    .nav-btn:hover {
+        background-color: rgba(255,255,255,0.05);
+    }
+
+    .header__inner {
+        padding: 0 20px;
+        justify-content: space-between;
+        height: 58px;
+    }
+
+    /* Добавляем отступ для основного контента */
+    body {
+        padding-top: 58px;
+    }
+
+    /* Отключаем трансформации хедера для мобильной версии */
+    .header--transformed,
+    .header--sticky {
+        transform: none !important;
+    }
+}

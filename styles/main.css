@@ -1,0 +1,16 @@
+@import 'base/variables.css';
+@import 'base/reset.css';
+
+
+@import 'layouts/content-block.css';
+
+
+@import 'components/header/header.css';
+@import 'components/header/header-expansion.css';
+@import 'components/content/first-section.css';
+@import 'components/buttons/nav-btn.css';
+@import 'components/buttons/order-btn.css';
+@import "components/content/second-section.css";
+@import "components/content/third-section.css";
+@import "components/buttons/submit-btn.css";
+@import "components/footer/footer.css";
