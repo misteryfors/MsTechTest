@@ -67,11 +67,16 @@
     }
 
     .footer-nav {
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding: var(--space-30) 0;
         gap: var(--space-20);
+    }
+
+    .footer-nav .nav-btn{
+        text-align: center;
     }
 
     .footer__logo{
