@@ -1,0 +1,106 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--color-border-light);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-40) 0;
+    gap: var(--space-60);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.footer-content__first-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo{
+        width: 256px;
+}
+
+.footer-content__second-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    padding: var(--space-60) var(--space-160);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-40);
+}
+
+/* Добавляем недостающую переменную для gap в footer-nav */
+:root {
+    --space-60: 3.75rem; /* 60px */
+    --space-160: 10rem;  /* 160px */
+}
+
+/* 1400px */
+@media (max-width: 1400px) {
+    .footer-content {
+        padding: var(--space-50) var(--space-80);
+    }
+
+    .footer-nav {
+        gap: var(--space-40);
+    }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+    .footer-content {
+        padding: var(--space-40) var(--space-50);
+        gap: var(--space-30);
+    }
+
+    .footer-content__first-line,
+    .footer-content__second-line {
+        flex-direction: column;
+        gap: var(--space-20);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-30) 0;
+        gap: var(--space-20);
+    }
+
+    .footer__logo{
+        width: 156px;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .footer-content {
+        padding: var(--space-30) var(--space-24);
+        gap: var(--space-24);
+    }
+
+    .footer-nav {
+        padding: var(--space-24) 0;
+        gap: var(--space-16);
+    }
+}
+
+/* 340px */
+@media (max-width: 340px) {
+    .footer-content {
+        padding: var(--space-24) var(--space-16);
+        gap: var(--space-16);
+    }
+
+    .footer-nav {
+        padding: var(--space-16) 0;
+        gap: var(--space-12);
+    }
+}

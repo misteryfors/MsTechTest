@@ -1,0 +1,16 @@
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-16);
+    padding: var(--space-xs) var(--space-sm);
+    transition: var(--transition-normal);
+    color: var(--color-white);
+    font-style: italic;
+
+}
+
+.nav-btn:hover {
+
+    color: var(--color-white);
+}
