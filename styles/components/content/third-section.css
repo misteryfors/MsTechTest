@@ -135,8 +135,13 @@
     }
 }
 
-/* 1024px */
-@media (max-width: 1024px) {
+/* 800px */
+@media (max-width: 800px) {
+
+    .third-section__overlay-image {
+        display: none;
+    }
+
     .third-section__container {
         flex-direction: column;
         padding: var(--space-50) var(--space-40);
